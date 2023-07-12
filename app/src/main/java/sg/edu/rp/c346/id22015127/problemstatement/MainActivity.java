@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 db.insertSong(sTitle.getText().toString(), singers.getText().toString(), Integer.parseInt(yor.getText().toString()), star);
                 db.close();
+                Toast.makeText(MainActivity.this, "New song inserted successfully", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -57,5 +59,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
     }
+
 }
